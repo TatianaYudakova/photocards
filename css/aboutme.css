@@ -1,0 +1,27 @@
+.main-text {
+	padding: 10px;
+	font-family: cursive;
+}
+
+.blok1 {
+	display: flex;
+}
+
+.podblok1 {
+	text-align: center;
+	padding: 100px;
+}
+
+#me {
+	width: 550px;
+	height: 400px;
+	padding-left: 60px;
+	padding-top: 20px;
+}
+
+#me2 {
+	width: 550px;
+	height: 400px;
+	padding-top: 30px;
+    padding-right: 40px;
+}

@@ -1,0 +1,38 @@
+.main-text {
+	padding: 0 30px 10px 30px;
+	font-family: cursive;
+}
+
+.introduction {
+	font-family: "Brush Script MT", cursive;
+	padding: 30px 0 0 0;
+	width: 100%;
+}
+
+.blok1 {
+	width: 100%;
+	display: flex;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+.blok1 h2 {
+	padding-left: 5px;
+}
+
+#helpful-materials2 {
+	height: 400px;
+	padding-top: 60px;
+}
+
+#instagram {
+	height: 400px;
+	width: 500px;
+	padding-top: 40px;
+}
+
+#helpful-materials3 {
+	width: 600px;
+    height: 400px;
+    padding-top: 60px;
+}

@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+}
+
+body {
+	background-color: white;
+	}
+
+.header {
+	box-shadow: 0 2px 7px #ccc;
+	background-color: whitesmoke;
+}
+
+.main-title {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	position: relative
+	margin: 0;
+}
+
+.main-title h1 {
+	padding: .5em .5em .0em .5em;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+	color: black;
+	opacity: 0.8;
+}
+
+.main-title h2 {
+	margin-top: -5px;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+	color: black;
+	opacity: 0.7;
+	font-style: italic;
+}
+
+.main-title h1 a {
+	text-decoration: none;
+	color: black; 
+}
+
+.top-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  /*background-color: whitesmoke;*/
+}
+
+.main-menu > li {
+  position:relative;
+  display: inline-block;
+  margin: 5px 10px;
+}
+.main-menu a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 6px 15px;
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  color: black;
+  border-bottom: 1px solid transparent;
+  transition: .3s linear;
+  opacity: 0.7;
+}
+
+.main-menu .sub-menu {
+	position: absolute;
+	list-style: none;
+	padding: 0;
+	background-color: whitesmoke;
+    margin: 0;
+	text-align: center;
+	display: none; 
+}
+
+.sub-menu a {
+	margin: 2px 0 0 0;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: black;
+	padding-top: 5px;
+	padding-left: 2px;
+}
+
+.main-menu > li > a:hover {
+	opacity: 0.5;
+}
+
+.main-menu > li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu > li > a:hover {
+	opacity: 0.4;
+}
+
+.table {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.row {
+	display: inline-flex;
+}
+
+.td {
+	margin: 15px;
+}
+
+.td img {
+	box-shadow: 0 2px 7px #ccc;
+}
+
+.td img:hover {
+	opacity: 0.5;
+}
+
+img {
+	width: 350px;
+	height: 250px; 
+	position: relative;
+}
+
+.footer {
+	text-align:center;
+	background-color: black;
+	height: 30px;
+	opacity: 0.5;
+}
+
+.footer p {
+	color: white;
+}
+
+.select-link {
+	font-weight:bold;
+}
+
+
+
+

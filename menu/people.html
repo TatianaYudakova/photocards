@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title>Люди</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<script src="../js/app.js"></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="header">
+			<div class="header">
+			<div id="enter" class="enter">
+				<button onClick="openEnterForm()" class="butEnter">Вход</button>
+				|
+				<button onClick="openRegForm()" class="butEnter">Регистрация</button>
+			</div>
+			<div id="enterAfter" class="enterAfter">
+				<button onClick="exit()" class="butEnter">Выход</button>
+			</div>
+			<div class="main-title">
+				<h1>PHOTOCARDS</h1>
+				<h2>by Tatiana Iudakova</h2>
+			</div>
+			<div class="top-menu">
+				<ul class="main-menu">
+					<li><a class="select-link" href="../index.html">Портфолио</a>
+						<ul class="sub-menu">
+							<li><a href="travel.html">Путешествия</a></li>
+							<li><a class="select-link" href="people.html">Люди</a></li>
+							<li><a href="street.html">Street фотография</a></li>
+						</ul>
+					</li>
+					<li><a href="cameras.html">Фотоаппаратура</a>
+						<ul class="sub-menu">
+							<li><a href="svetofiltr.html">Виды светофильтров</a></li>
+							<li><a href="objectivs.html">Характеристики объективов</a></li>
+						</ul>
+					</li>
+					<li><a href="helphul_material.html">Полезные материалы</a></li>
+					<li><a href="blog.html">Блог</a></li>
+					<li><a href="aboutme.html">О себе</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="table">
+			<div class="row">
+				<div class="td">
+					<img id="img1" onClick="openImage(img1)" src="../src/portfolio/people/1.jpg" alt="In flight"/>
+				</div>
+				<div class="td">
+					<img id="img2" onClick="openImage(img2)" src="../src/portfolio/people/2.jpg" alt="Loneliness" />
+				</div>
+				<div class="td">
+					<img id="img3" onClick="openImage(img3)" src="../src/portfolio/people/3.jpg" alt="Road to sky"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="td">
+					<img id="img4" onClick="openImage(img4)" src="../src/portfolio/people/4.jpg" alt="Evening calm"/>
+				</div>
+				<div class="td">
+					<img id="img5" onClick="openImage(img5)" src="../src/portfolio/people/5.jpg" alt="Roses"/>
+				</div>
+				<div class="td">
+					<img id="img6" onClick="openImage(img6)" src="../src/portfolio/people/6.jpg" alt="Field at sunset"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="td">
+					<img id="img7" onClick="openImage(img7)" src="../src/portfolio/people/7.jpg" alt="Evening calm"/>
+				</div>
+				<div class="td">
+					<img id="img8" onClick="openImage(img8)" src="../src/portfolio/people/8.jpg" alt="Roses"/>
+				</div>
+				<div class="td">
+					<img id="img9" onClick="openImage(img9)" src="../src/portfolio/people/9.jpg" alt="Field at sunset"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="td">
+					<img id="img10" onClick="openImage(img10)" src="../src/portfolio/people/10.jpg" alt="Evening calm"/>
+				</div>
+				<div class="td">
+					<img id="img11" onClick="openImage(img11)" src="../src/portfolio/people/11.jpg" alt="Roses"/>
+				</div>
+				<div class="td">
+					<img id="img12" onClick="openImage(img12)" src="../src/portfolio/people/12.jpg" alt="Field at sunset"/>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+		  	<span class="close">&times;</span>
+		  	<img class="modal-content" id="img01">
+		  	<div id="caption"></div>
+		</div>
+		<div id="regForm" class="modal">
+			<span id="closeReg" class="close" onclick="">&times;</span>
+			<form id="registrationForm" class="modalEnterForm">
+				<p>Регистрация</p>
+				<table id="myTableReg">
+					<tr>
+						<td class="textTable">Имя:</td> 
+						<td>
+							<input class="inputReg" type="text" name="firstName" id="prFirstName" placeholder="Введите имя"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Фамилия:</td> 
+						<td>
+							<input class="inputReg" type="text" name="lastName" id="prLastName" placeholder="Введите фамилию"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Пароль:</td>
+						<td>
+							<input class="inputReg" type="password" name="psw1" id="prPsw1" onChange="isValidPassword()" placeholder="Введите пароль" 
+							title="Пароль должен содержать от 6 до 30 символов. Минимум: одну цифру, заглавную и строчную буквы, спецсимвол.">
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="textTable">Повторить пароль:</td>
+						<td>
+							<input class="inputReg" type="password" name="psw2" id = "prPsw2" placeholder="Повторите пароль">
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">E-mail:</td>
+						<td>
+							<input class="inputReg"type="text" name="email" id="prEmail" onChange="isValidEmail()" placeholder="Введите e-mail"/>
+						</td>
+					</tr>
+				</table>
+				<input class="validButton" type="button" onclick="validate(this.form)" value="Зарегистрироваться">
+			</form>	
+		</div>
+		<div id="enterForm" class="modal">
+			<span id="closeEnter" class="close" onclick="">&times;</span>
+			<form id="entForm" class="modalEnterForm">
+				<p id="enterTitle">Вход</p>
+				<table id="myTableEnt">
+					<tr>
+						<td class="textTable">E-mail:</td>
+						<td>
+							<input type="text" name="email" id="prEmail" onChange="isValidEmail()" placeholder="Введите e-mail"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Пароль:</td>
+						<td>
+							<input type="password" name="psw1" id="prPsw1" placeholder="Введите пароль">
+						</td>
+					</tr>
+				</table>
+				<input class="validButton" type="button" onclick="validateEnter(this.form)" value="Войти">
+			</form>	
+		</div>
+	</body>
+</html>

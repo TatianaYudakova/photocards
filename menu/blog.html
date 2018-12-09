@@ -1,0 +1,151 @@
+<html>
+	<head>
+		<title>Блог</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/blog.css">
+		<script src="../js/app.js"></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="header">
+			<div id="enter" class="enter">
+				<button onClick="openEnterForm()" class="butEnter">Вход</button>
+				|
+				<button onClick="openRegForm()" class="butEnter">Регистрация</button>
+			</div>
+			<div id="enterAfter" class="enterAfter">
+				<button onClick="exit()" class="butEnter">Выход</button>
+			</div>
+			<div class="main-title">
+				<h1>PHOTOCARDS</h1>
+				<h2>by Tatiana Iudakova</h2>
+			</div>
+			<div class="top-menu">
+				<ul class="main-menu">
+					<li><a href="../index.html">Портфолио</a>
+						<ul class="sub-menu">
+							<li><a href="travel.html">Путешествия</a></li>
+							<li><a href="people.html">Люди</a></li>
+							<li><a href="street.html">Street фотография</a></li>
+						</ul>
+					</li>
+					<li><a href="cameras.html">Фотоаппаратура</a>
+						<ul class="sub-menu">
+							<li><a href="svetofiltr.html">Виды светофильтров</a></li>
+							<li><a href="objectivs.html">Характеристики объективов</a></li>
+						</ul>
+					</li>
+					<li><a href="helphul_material.html">Полезные материалы</a></li>
+					<li><a class="select-link" href="blog.html">Блог</a></li>
+					<li><a href="aboutme.html">О себе</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-info">
+			<div class="blog">
+				<div class="photo">
+					<img src="../src/blog/norway/title.jpg" alt="Norway"/>
+				</div>
+				<div class="text">
+					<div class="text-title">
+						<h3>Путешествие по Норвегии</h3>
+					</div>
+					<div class="text-main">
+						<p>Думаешь путешествие по Норвегии слишком дорогое удовольствие? Скептически относишься к автобусным турам? Или вообще не знаешь зачем ехать в эту страну? Тогда эта статья для тебя! Или если тебе интересно просто почитать о первом моем знакомстве со Скнадинавией, то тоже переходи и читай!</p>
+						<a href="./blog/norway.html">Читать далее...</a>
+					</div>
+				</div>
+			</div>
+			<div class="blog">
+				<div class="photo">
+					<img src="../src/blog/abkhazia/title.jpg" alt="Abkhazia"/>
+				</div>
+				<div class="text">
+					<div class="text-title">
+						<h3>Бюджетное путешествие по Абхазии</h3>
+					</div>
+					<div class="text-main">
+						<p>"На море слишком дорого ехать..", "У меня нет загранпаспорта, а лежать на переполненных российских пляжах нет никакого желания..." - если посещают такие мысли, когда планируешь отдых на море, то тогда эта статья для тебя! Переходи и читай, а мои фотографии помогут тебе насладиться всей красотой этой чудесной страны.</p>
+						<a href="./blog/abkhazia.html">Читать далее...</a>
+					</div>
+				</div>
+			</div>
+			<div class="blog">
+				<div class="photo">
+					<img src="../src/blog/cruise/cruise.jpg" alt="Cruise"/>
+				</div>
+				<div class="text">
+					<div class="text-title">
+						<h3>Круиз по средиземноморью</h3>
+					</div>
+					<div class="text-main">
+						<p>В данной статье я расскажу о своих впечатлениях от путешествий на круизных лайнерах. О том, как данный вид отдыха поможет ощутить себя совершенно по-новому, и не только показать красоты нескольких стран за раз, но и дать почувствовать всю романтику путешествия по морям и океанам.</p>
+						<a href="./blog/cruise.html">Читать далее...</a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div id="regForm" class="modal">
+			<span id="closeReg" class="close" onclick="">&times;</span>
+			<form id="registrationForm" class="modalEnterForm">
+				<p>Регистрация</p>
+				<table id="myTableReg">
+					<tr>
+						<td class="textTable">Имя:</td> 
+						<td>
+							<input class="inputReg" type="text" name="firstName" id="prFirstName" placeholder="Введите имя"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Фамилия:</td> 
+						<td>
+							<input class="inputReg" type="text" name="lastName" id="prLastName" placeholder="Введите фамилию"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Пароль:</td>
+						<td>
+							<input class="inputReg" type="password" name="psw1" id="prPsw1" onChange="isValidPassword()" placeholder="Введите пароль" 
+							title="Пароль должен содержать от 6 до 30 символов. Минимум: одну цифру, заглавную и строчную буквы, спецсимвол.">
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="textTable">Повторить пароль:</td>
+						<td>
+							<input class="inputReg" type="password" name="psw2" id = "prPsw2" placeholder="Повторите пароль">
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">E-mail:</td>
+						<td>
+							<input class="inputReg"type="text" name="email" id="prEmail" onChange="isValidEmail()" placeholder="Введите e-mail"/>
+						</td>
+					</tr>
+				</table>
+				<input class="validButton" type="button" onclick="validate(this.form)" value="Зарегистрироваться">
+			</form>	
+		</div>
+		<div id="enterForm" class="modal">
+			<span id="closeEnter" class="close" onclick="">&times;</span>
+			<form id="entForm" class="modalEnterForm">
+				<p id="enterTitle">Вход</p>
+				<table id="myTableEnt">
+					<tr>
+						<td class="textTable">E-mail:</td>
+						<td>
+							<input type="text" name="email" id="prEmail" onChange="isValidEmail()" placeholder="Введите e-mail"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="textTable">Пароль:</td>
+						<td>
+							<input type="password" name="psw1" id="prPsw1" placeholder="Введите пароль">
+						</td>
+					</tr>
+				</table>
+				<input class="validButton" type="button" onclick="validateEnter(this.form)" value="Войти">
+			</form>	
+		</div>
+	</body>
+</html>

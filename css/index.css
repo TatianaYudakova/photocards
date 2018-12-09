@@ -1,0 +1,323 @@
+*{
+	margin: 0;
+}
+
+body {
+	background-color: white;
+}
+
+a:hover {
+	color: red;
+	opacity: 0.7;
+}
+
+a:visited {
+	color: #483D8B;
+}
+
+a:link {
+	color: #6A5ACD;
+}
+
+.enter {
+    text-align: right;
+    display: block;
+}
+
+.butEnter {
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.enterAfter {
+  text-align: right;
+  display: none;
+}
+
+.header {
+	box-shadow: 0 2px 7px #ccc;
+	background-color: whitesmoke;
+}
+
+.main-title {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	position: relative
+	margin: 0;
+}
+
+.main-title h1 {
+	padding: .5em .5em .0em .5em;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+	color: black;
+	opacity: 0.8;
+}
+
+.main-title h2 {
+	margin-top: -5px;
+    /*font-family: 'Georgia', serif;*/
+    font-family: "Brush Script MT", cursive;
+    font-size: 20px;
+	color: black;
+	opacity: 0.7;
+	font-style: italic;
+}
+
+.main-title h1 a {
+	text-decoration: none;
+	color: black; 
+}
+
+.top-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  /*background-color: whitesmoke;*/
+}
+
+.main-menu > li {
+  position:relative;
+  display: inline-block;
+  margin: 5px 10px;
+}
+.main-menu a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 6px 15px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+  color: black;
+  border-bottom: 1px solid transparent;
+  transition: .3s linear;
+  opacity: 0.7;
+}
+
+.main-menu .sub-menu {
+	position: absolute;
+	list-style: none;
+	padding: 0;
+	background-color: whitesmoke;
+    margin: 0;
+	text-align: center;
+	display: none; 
+}
+
+.sub-menu a {
+	margin: 2px 0 0 0;
+    font-family: "Brush Script MT", cursive;
+    font-size: 20px;
+    color: black;
+	padding-top: 5px;
+	padding-left: 2px;
+}
+
+.main-menu > li > a:hover {
+	opacity: 0.5;
+}
+
+.main-menu > li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu > li > a:hover {
+	opacity: 0.4;
+}
+
+.table {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.row {
+	display: inline-flex;
+}
+
+.td {
+	margin: 15px;
+}
+
+/*.td {
+	box-shadow: 0 2px 7px #ccc;
+}*/
+
+.td img:hover  {
+	opacity: 0.5;
+}
+
+.row .td img {
+	width: 350px;
+	height: 250px; 
+	position: relative;
+}
+
+/*#myImg {
+	cursor: pointer;
+    transition: 0.3s; 
+}*/
+
+.footer {
+	text-align:center;
+	background-color: black;
+	height: 30px;
+	opacity: 0.5;
+}
+
+.footer p {
+	color: white;
+}
+
+.select-link {
+	font-weight:bold;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    z-index: 1010;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.modalEnterForm {
+  background-color: white;
+  font-family: 'Georgia', serif;
+  margin: auto;
+  width: 600px;
+  padding: 0 0 20px;
+  text-align: -webkit-center;
+  border-radius: 10px;
+}
+
+#enterTitle {
+  padding: 10px;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.validButton {   
+  margin-top: 10px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.textTable {
+  text-align: right;
+}
+
+.error input,
+.error textarea {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.inputReg {
+  width: 200px;
+}
+
+.tooltip {
+  font-size: 9px;
+}
+
+.textTable {
+  vertical-align: top;
+}
+
+.error-message {
+  font-size: 9px;
+}
+
+.error-enter {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
